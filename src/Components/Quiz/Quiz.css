@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 640px;
+    margin: auto;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 40px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added for background animation */
+  }
+  
+  .container hr {
+    height: 2px;
+    background: red;
+  }
+  
+  .container h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .container h3 {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 20px 0;
+  }
+  
+  .container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .container ul li {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .container ul li.correct {
+    background-color: green;
+    color: white;
+  }
+  
+  .container ul li.wrong {
+    background-color: red;
+    color: white;
+  }
+  
+  .container button {
+    color: white;
+    background-color: violet;
+    margin: 10px auto;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .container button:hover {
+    background-color: darkviolet;
+  }
+  
+  .container button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  
+  .container .index {
+    margin: auto;
+    font-size: 18px;
+  }
+  
+  .progress {
+    background-color: #ddd;
+    border-radius: 20px;
+    margin: 20px 0;
+    height: 20px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 20px;
+    transition: width 0.3s;
+  }
+  
+  /* Animation for background */
+  @keyframes animateBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+  }
+  
+  .container {
+    background: linear-gradient(45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: animateBackground 10s ease infinite;
+  }
+  
